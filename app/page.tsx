@@ -68,6 +68,20 @@ export default function Home() {
           {/* DESKTOP MENU */}
           <div className="hidden md:flex gap-8 text-sm font-medium">
 
+            <a
+             href="#contact"
+           className="bg-green-500 text-black px-4 py-1 rounded-lg font-bold"
+          >
+            Request a Quote
+          </a>
+
+          <a
+          href="tel:0766208922"
+          className="border border-green-400 px-4 py-1 rounded-lg"
+>
+          Call Now
+          </a>
+
             <a href="#home" className="hover:text-green-400 transition">
               Home
             </a>
@@ -141,6 +155,30 @@ export default function Home() {
             >
               Contact
             </a>
+
+            <a
+          href="#contact"
+          className="block bg-green-500 text-black px-4 py-2 rounded-lg font-bold"
+          onClick={() => setMenuOpen(false)}
+        >
+          Request a Quote
+        </a>
+
+        <a
+          href="tel:0766208922"
+          className="block border border-green-400 px-4 py-2 rounded-lg"
+          onClick={() => setMenuOpen(false)}
+        >
+          Call Now
+        </a>
+
+        <a
+          href="https://wa.me/27766208922"
+          target="_blank"
+          className="block bg-green-600 text-black px-4 py-2 rounded-lg font-bold"
+        >
+          WhatsApp Us
+        </a>
           </div>
         )}
       </nav>
@@ -178,50 +216,121 @@ export default function Home() {
           Gauteng, Nzhelele and surrounding areas.
         </p>
 
+
+        <div className="mt-8 flex flex-wrap justify-center gap-4">
+
+        <a
+          href="#contact"
+          className="bg-green-500 text-black font-bold py-3 px-6 rounded-xl hover:scale-105 transition"
+        >
+          Request a Quote
+        </a>
+
+        <a
+          href="tel:0766208922"
+          className="border border-white text-white font-bold py-3 px-6 rounded-xl"
+        >
+          Call Now
+        </a>
+
         <a
           href="https://wa.me/27766208922"
           target="_blank"
-          className="inline-block mt-8 bg-green-500 hover:bg-green-600 hover:scale-105 text-black font-bold py-3 px-8 rounded-xl transition"
+          className="bg-green-600 text-black font-bold py-3 px-6 rounded-xl"
         >
-          Contact Us On WhatsApp
+          WhatsApp Us
         </a>
+
+      </div>
       </section>
 
-      {/* SERVICES */}
-      <section
-        id="services"
-        className="py-20 px-6"
+     {/* SERVICES */}
+<section id="services" className="py-20 px-6">
+  <h2 className="text-4xl font-bold text-center mb-12">
+    Our Services
+  </h2>
+
+  <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+    {services.map((service) => (
+      <div
+        key={service.title}
+        className="border border-gray-200 rounded-2xl p-8 shadow-lg hover:scale-105 hover:shadow-2xl transition duration-300"
       >
-        <h2 className="text-4xl font-bold text-center mb-12">
-          Our Services
-        </h2>
-
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-
-          {services.map((service) => (
-            <div
-              key={service.title}
-              className="border border-gray-200 rounded-2xl p-8 shadow-lg hover:scale-105 hover:shadow-2xl transition duration-300"
-            >
-
-              <div className="text-green-500 mb-4">
-                {service.icon}
-              </div>
-
-              <h3 className="text-2xl font-bold text-green-500 mb-4 break-words">
-                {service.title}
-              </h3>
-
-              <p className="text-gray-700 leading-7 break-words">
-                Professional quotation-based{" "}
-                {service.title.toLowerCase()} services
-                for homes, schools, churches, offices
-                and businesses.
-              </p>
-            </div>
-          ))}
+        <div className="text-green-500 mb-4">
+          {service.icon}
         </div>
-      </section>
+
+        <h3 className="text-2xl font-bold text-green-500 mb-4 break-words">
+          {service.title}
+        </h3>
+
+        {/* BULLET LIST STYLE */}
+        <ul className="list-disc pl-5 space-y-2 text-gray-700">
+          {service.title === "Construction" && (
+            <>
+              <li>Building Construction</li>
+              <li>Planning and Design</li>
+              <li>Electrical Solutions</li>
+              <li>Road Maintenance</li>
+              <li>Paving & Tiling</li>
+            </>
+          )}
+
+          {service.title === "Gardening & Landscaping" && (
+            <>
+              <li>Grass cutting</li>
+              <li>Tree trimming</li>
+              <li>Garden maintenance</li>
+              <li>Landscaping design</li>
+              <li>Weed control</li>
+              <li>Planting flowers and trees</li>
+            </>
+          )}
+
+          {service.title === "Painting" && (
+            <>
+              <li>Interior painting</li>
+              <li>Exterior painting</li>
+              <li>Roof cleaning & painting</li>
+            </>
+          )}
+
+          {service.title === "Plumbing" && (
+            <>
+              <li>Pipe repairs</li>
+              <li>Tap installations</li>
+              <li>Toilet repairs</li>
+              <li>Drain unblocking</li>
+              <li>Geyser maintenance</li>
+              <li>Leak detection</li>
+            </>
+          )}
+
+          {service.title === "Cleaning Services" && (
+            <>
+              <li>Residential cleaning</li>
+              <li>Office cleaning</li>
+              <li>Deep cleaning</li>
+              <li>Post-construction cleaning</li>
+              <li>Window cleaning</li>
+              <li>Yard cleaning</li>
+            </>
+          )}
+
+          {service.title === "Electrical Solutions" && (
+            <>
+              <li>House wiring</li>
+              <li>Fault finding</li>
+              <li>Electrical repairs</li>
+              <li>Installations</li>
+            </>
+          )}
+        </ul>
+      </div>
+    ))}
+  </div>
+</section>
 
       {/* COMPANY DETAILS */}
       <section className="bg-gray-100 py-20 px-6">
