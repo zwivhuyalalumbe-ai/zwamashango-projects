@@ -295,7 +295,7 @@ export default function Home() {
               {[
                 ["REG NUMBER", "2026/404521/07"],
                 ["TAX STATUS", "SARS Registered"],
-                ["BANKING", "Capitec Business"],
+                ["BANKING", "First National Bank Business"],
                 ["FOUNDED", "2026"],
               ].map(([lbl, val]) => (
                 <div key={lbl}>
