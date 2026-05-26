@@ -83,7 +83,7 @@ export default function Home() {
       icon: <Sparkles size={32} />,
       title: "Cleaning Services",
       img: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&q=80",
-      items: ["Residential Cleaning", "Office Cleaning", "Deep Cleaning", "Post-Construction Cleaning"],
+      items: ["Residential Cleaning", "Office Cleaning", "Deep Cleaning", "Post-Construction Cleaning", "Chemical supplies"],
     },
     {
       icon: <Zap size={32} />,
@@ -590,7 +590,7 @@ export default function Home() {
               ))}
             </div>
             <div className="mt-8 pt-6 text-xs" style={{ borderTop: "1px solid rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.3)" }}>
-              Reg: 2026/404521/07 · SARS Tax Registered · Capitec Business Account
+              Reg: 2026/404521/07 · SARS Tax Registered · First National Bank Business Account
             </div>
           </div>
 
