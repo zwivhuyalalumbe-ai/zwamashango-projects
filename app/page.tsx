@@ -710,7 +710,7 @@ export default function Home() {
             © 2026 Zwamashango Project (Pty) Ltd. All rights reserved.
           </span>
           <span className="text-xs" style={{ color: "rgba(255,255,255,0.2)" }}>
-            SARS Registered · Capitec Business Account
+            SARS Registered · First National Bank Business Account
           </span>
         </div>
       </footer>
